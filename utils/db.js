@@ -14,9 +14,6 @@ export const connectToDB=async()=>{
         await mongoose.connect(process.env.MONGO, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
-
         });
 
         isConnected=true
