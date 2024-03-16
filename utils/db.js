@@ -11,12 +11,13 @@ export const connectToDB=async()=>{
     }
 
     try{
-        await mongoose.connect(process.env.MONGOURL, {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 50000, // Example value, adjust as needed
-        socketTimeoutMS: 30000
-        }); // Example value, adjust as needed
+        await mongoose.connect(process.env.MONGO, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+
+        });
 
         isConnected=true
         console.log("connected to mongodb")
@@ -24,7 +25,4 @@ export const connectToDB=async()=>{
     catch(e){
         console.log(e)
     }
-
-
-
 }
