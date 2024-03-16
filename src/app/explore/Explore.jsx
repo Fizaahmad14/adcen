@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import ExploreItem from "./ExploreItem";
 
 import { useWishlist } from "@/app/components/wishlist/WishListContext";

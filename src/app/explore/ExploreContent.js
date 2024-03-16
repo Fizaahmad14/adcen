@@ -23,6 +23,8 @@ import sset from "../../../public/images/uni/sset.jpg";
 import ucp from "../../../public/images/uni/ucp.jpg";
 import vu from "../../../public/images/uni/vu.jpg";
 import icu from "../../../public/images/uni/icu.png";
+import uniLahore from "../../../public/images/uni/uniOfLahore.png";
+import ned2 from "../../../public/images/uni/ned2.png";
 
 const exploreItems = [
     {
@@ -39,13 +41,13 @@ const exploreItems = [
         Degree: "Bachelors, Masters",
         Campus: "Virtual",
     },
-    // {
-    //   Name: "University of Lahore",
-    //   href: 'universities/university-of-lahore',
-    //   src:
-    //   Degree: "Bachelors, Masters",
-    //   Campus: "Lahore",
-    // },
+    {
+        Name: "University of Lahore",
+        href: 'universities/university-of-lahore',
+        src: uniLahore,
+        Degree: "Bachelors, Masters",
+        Campus: "Lahore",
+    },
     {
         Name: "University of Central Punjab",
         href: "universities/university-of-central-punjab",
@@ -95,13 +97,13 @@ const exploreItems = [
         Degree: "Bachelors, Masters",
         Campus: "Islamabad",
     },
-    // {
-    //   Name: "NED (University of Engeenering and Technology)",
-    //   href: 'universities/ned',
-    //   src:
-    //   Degree: "Bachelors, Masters",
-    //   Campus: "Karachi",
-    // },
+    {
+        Name: "NED (University of Engeenering and Technology)",
+        href: 'universities/ned',
+        src: ned2,
+        Degree: "Bachelors, Masters",
+        Campus: "Karachi",
+    },
     {
         Name: "NUST",
         href: "universities/nust",

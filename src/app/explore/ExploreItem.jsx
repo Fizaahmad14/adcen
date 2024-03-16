@@ -25,7 +25,7 @@ export default function ExploreItem({ addItem, delItem, item }) {
 
   return (
     <>
-      <div className="h-full border bg-gray-100 border-gray-500 flex flex-col ">
+      <div className="h-full border bg-gray-50 border-gray-500 flex flex-col ">
         <div className="p-16">
           <Image
             // className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -60,9 +60,9 @@ export default function ExploreItem({ addItem, delItem, item }) {
                 className="bg-transparent"
               >
                 {isFavorite ? (
-                  <FaHeart className="text-sm text-green-500" />
+                  <FaHeart className="text-lg text-green-500" />
                 ) : (
-                  <FaRegHeart className="text-sm text-green-500" />
+                  <FaRegHeart className="text-lg text-green-500" />
                 )}
               </Button>
             </div>
