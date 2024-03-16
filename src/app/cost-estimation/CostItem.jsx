@@ -1,246 +1,93 @@
-import React from "react";
+import Image from "next/image";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
-export default function CostItem({
-  selectedUniversityIndex,
-  onSelect,
-}) {
-  const universities = [
-    {
-      University: "GIKI",
-      Tuition: "407500",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "Virtual University of Pakistan",
-      Tuition: "12750",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "University of Lahore",
-      Tuition: "74,600",
-      Hostel: "23800",
-      Transport: "10000",
-      Food: "5000",
-    },
-    {
-      University: "University of Central Punjab",
-      Tuition: "242,600",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "ARID",
-      Tuition: "14800",
-      Hostel: "13000",
-      Transport: "0",
-      Food: "4500",
-    },
-    {
-      University: "University of Agriculture",
-      Tuition: "40570",
-      Hostel: "18750",
-      Transport: "9000",
-      Food: "5000",
-    },
-    {
-      University: "BUITEMS",
-      Tuition: "48415",
-      Hostel: "8000",
-      Transport: "100",
-      Food: "6000",
-    },
-    {
-      University: "Sir Syed University of Engineering & Technology",
-      Tuition: "75000",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "Preston",
-      Tuition: "52500",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "PIEAS",
-      Tuition: "52400",
-      Hostel: "4400",
-      Transport: "11000",
-      Food: "0",
-    },
-    {
-      University: "NED",
-      Tuition: "37020",
-      Hostel: "900",
-      Transport: "500",
-      Food: "500",
-    },
-    {
-      University: "NUST",
-      Tuition: "149000",
-      Hostel: "34000",
-      Transport: "0",
-      Food: "13000",
-    },
-    {
-      University: "National Textile University",
-      Tuition: "62400",
-      Hostel: "25000",
-      Transport: "19000",
-      Food: "9000",
-    },
-    {
-      University:
-        "Mehran University of Engineering & Technology, Jamshoro",
-      Tuition: "18000",
-      Hostel: "9000",
-      Transport: "14000",
-      Food: "5000",
-    },
-    {
-      University: "LUMS",
-      Tuition: "345398",
-      Hostel: "71095",
-      Transport: "18000",
-      Food: "85000",
-    },
-    {
-      University: "Lahore College for Women University, Lahore",
-      Tuition: "43600",
-      Hostel: "4500",
-      Transport: "1000",
-      Food: "5082",
-    },
-    {
-      University: "Jinnah University for Women, Karachi",
-      Tuition: "55000",
-      Hostel: "7000",
-      Transport: "0",
-      Food: "3700",
-    },
-    {
-      University: "Islamia College University, Peshawar",
-      Tuition: "50000",
-      Hostel: "8000",
-      Transport: "1000",
-      Food: "5000",
-    },
-    {
-      University: "Iqra University",
-      Tuition: "127120",
-      Hostel: "7000",
-      Transport: "0",
-      Food: "3000",
-    },
-    {
-      University: "FAST",
-      Tuition: "135000",
-      Hostel: "0",
-      Transport: "40000",
-      Food: "0",
-    },
-    {
-      University: "COMSATS",
-      Tuition: "129500",
-      Hostel: "38500",
-      Transport: "34000",
-      Food: "17000",
-    },
-    {
-      University:
-        "City University of Science & Information Technology",
-      Tuition: "26350",
-      Hostel: "0",
-      Transport: "0",
-      Food: "0",
-    },
-    {
-      University: "Beaconhouse National University, Lahore",
-      Tuition: "282500",
-      Hostel: "91000",
-      Transport: "0",
-      Food: "9000",
-    },
-    {
-      University: "Bahauddin Zakariya University, Multan",
-      Tuition: "19922",
-      Hostel: "7200",
-      Transport: "0",
-      Food: "4000",
-    },
-    {
-      University: "Bacha Khan University, Khyber Pakhtunkhwa",
-      Tuition: "23800",
-      Hostel: "0",
-      Transport: "19000",
-      Food: "0",
-    },
-    {
-      University: "Allama Iqbal Open University, Islamabad",
-      Tuition: "40020",
-      Hostel: "6000",
-      Transport: "0",
-      Food: "5000",
-    },
-    {
-      University:
-        "Abbottabad University of Science and Technology (AUST)",
-      Tuition: "40900",
-      Hostel: "0",
-      Transport: "10000",
-      Food: "0",
-    },
-  ];
+import { Button } from "@nextui-org/react";
 
-  const handleChange = (e) => {
-    const selectedIndex = parseInt(e.target.value, 10);
-    onSelect(selectedIndex);
+import { useWishlist } from "../components/wishlist/WishListContext";
+
+export default function CostItem({ item }) {
+  const { favorites, toggleFavorite, addItem, delItem } =
+    useWishlist();
+
+  const isFavorite = favorites[item.id] || false;
+
+  const handleToggleFavorite = (item1) => {
+    if (!isFavorite) {
+      addItem(item1);
+      toggleFavorite(item.id);
+    } else {
+      delItem(item1.Name);
+      toggleFavorite(item.id);
+    }
   };
+
   return (
     <>
-      <div>
-        <label>Select University:</label>
-        <select
-          value={selectedUniversityIndex}
-          onChange={handleChange}
-        >
-          {universities.map((university, index) => (
-            <option key={index} value={index}>
-              {university.University}
-            </option>
-          ))}
-        </select>
-
-        {selectedUniversityIndex !== null && (
-          <div>
-            <h2>
-              Selected University:{" "}
-              {universities[selectedUniversityIndex].University}
-            </h2>
-            <p>
-              Tuition Fees: $
-              {universities[selectedUniversityIndex].Tuition}
-            </p>
-            <p>
-              Hostel Fees: $
-              {universities[selectedUniversityIndex].Hostel}
-            </p>
-            <p>
-              Transport Fees: $
-              {universities[selectedUniversityIndex].Transport}
-            </p>
-            <p>
-              Food Cost: ${universities[selectedUniversityIndex].Food}
+      <div className="shadow-md bg-gray-50 space-y-4 rounded-md p-4 h-max">
+        <div className="w-full ">
+          <div className="flex text-lg items-center justify-between w-full">
+            <h3 className=" font-poppins text-xl font-semibold text-gray-900 mb-3">
+              {item.Name}
+            </h3>
+            <p className="text-xl font-bold font-poppins text-gray-700">
+              PKR{" "}
+              {(
+                +item.fees.Tuition +
+                +item.fees.Hostel +
+                +item.fees.Transport +
+                +item.fees.Food
+              ).toLocaleString()}
+              <span className="text-sm text-green-500 font-medium">
+                {" "}
+                /semester
+              </span>
             </p>
           </div>
-        )}
+          <div className="flex justify-between items-center ">
+            <p className="text-base text-gray-700">
+              {item.Degree} <span className="text-green-600">||</span>{" "}
+              {item.Campus}
+            </p>
+            <Button
+              size="sm"
+              onClick={() => handleToggleFavorite(item)}
+              isIconOnly
+              className="bg-transparent"
+            >
+              {isFavorite ? (
+                <FaHeart className="text-lg text-green-500" />
+              ) : (
+                <FaRegHeart className="text-lg text-green-500" />
+              )}
+            </Button>
+          </div>
+        </div>
+        <hr className="border" />
+        <div className="flex items-center w-full justify-between">
+          <Image width={100} alt={item.Name} src={item.src} />
+          <div className="text-gray-700 flex gap-6 justify-start text-base space-y-1">
+            <div className="pt-1">
+              <p>Tuition</p>
+              <p>Hostel</p>
+              <p>Transport</p>
+              <p>Food</p>
+            </div>
+            <div>
+              <div className="flex items-center ">
+                <p>{item.fees.Tuition}</p>
+              </div>
+              <div className="flex items-center ">
+                <p>{item.fees.Hostel}</p>
+              </div>
+              <div className="flex items-center ">
+                <p>{item.fees.Transport}</p>
+              </div>
+              <div className="flex items-center ">
+                <p>{item.fees.Food}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
