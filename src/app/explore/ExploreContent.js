@@ -29,7 +29,7 @@ import ned2 from "../../../public/images/uni/ned2.png";
 const exploreItems = [
     {
         Name: "GIKI",
-        href: "universities/giki",
+        href: "universities/GIKI-Info",
         src: giki,
         Degree: "Bachelors, Masters",
         Campus: "Topi, Khyber Pakhtunkhwa",
