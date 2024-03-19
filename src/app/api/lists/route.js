@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { connectToDB  } from "../../../../utils/db";
+// import testUniDetailsModel from "@/app/dbData/insertion";
 
 import UniDetailsModel from "../../../../models/uniDetails";
 
@@ -17,3 +18,5 @@ export async function GET(req) {
     });
   }
 }
+
+// testUniDetailsModel();
