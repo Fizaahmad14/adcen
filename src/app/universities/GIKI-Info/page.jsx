@@ -3,10 +3,29 @@ import jsonData from './GIKI.json';
 import './style.css'; // Import the CSS file
 
 const BlogComponent = () => {
+  // Function to format content
   const formatContent = (content) => {
     // Use regular expressions to match the headings and apply bold formatting
     return content.replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
   };
+
+  // Function to handle not found error
+  const notFound = () => {
+    console.error("Resource not found");
+    // Handle the case when the requested resource is not found
+  };
+
+  // Function to fetch data
+  async function getData() {
+    try {
+      const res = await fetch("http://localhost:3000/api/lists", { cache: "no-store" });
+      if (!res.ok) return notFound();
+      return res.json();
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      // Handle fetch error
+    }
+  }
 
   return (
     <div>
