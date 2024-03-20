@@ -1,8 +1,12 @@
 import React from "react";
-import jsonData from "./GIKI.json";
+//import jsonData from "./GIKI.json";
+import { fetchExploreItems } from "@/app/contexts/fetchData";
 import "./style.css"; // Import the CSS file
 
+const information = await fetchExploreItems();
+const jsonData = information[0].information;
 const BlogComponent = () => {
+  
   const formatContent = (content) => {
     // Use regular expressions to match the headings and apply bold formatting
     return content.replace(/\*([^*]+)\*/g, "<strong>$1</strong>");
