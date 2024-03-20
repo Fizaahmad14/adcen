@@ -1,20 +1,15 @@
 "use client";
 import ExploreItem from "./ExploreItem";
-
 import { useWishlist } from "@/app/components/wishlist/WishListContext";
-import exploreItems from "./ExploreContent";
 
 export default function Explore({
   itemLength,
   nameArr,
   topSpacing,
   heroText,
+  exploreItems,
 }) {
   const { addItem, delItem } = useWishlist();
-
-  exploreItems.forEach((element, index) => {
-    element.id = index;
-  });
 
   const handleAddItem = (item) => {
     addItem(item);

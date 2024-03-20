@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 import { Button } from "@nextui-org/react";
