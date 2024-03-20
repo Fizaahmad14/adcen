@@ -1,15 +1,23 @@
 import React from "react";
 //import jsonData from "./GIKI.json";
 import { fetchExploreItems } from "@/app/contexts/fetchData";
-import "./style.css"; // Import the CSS file
+import "../style.css"; // Import the CSS file
 
-const information = await fetchExploreItems();
-const jsonData = information[0].information;
-const BlogComponent = () => {
-  
+
+//const jsonData = information[0].information;
+
+
+export default async function  BlogComponent ({params}) {
+  console.log(params);
+  const information = await fetchExploreItems();
+  const uni = information.find((item) =>
+    item.href.includes(params.slug)
+    );
+    const jsonData = uni.information;
   const formatContent = (content) => {
     // Use regular expressions to match the headings and apply bold formatting
-    return content.replace(/\*([^*]+)\*/g, "<strong>$1</strong>");
+    return content.replace(/\*([^*]+)\*/g, "<strong>$1</strong>"
+    );
   };
 
   return (
@@ -29,7 +37,7 @@ const BlogComponent = () => {
               <div key={key}>
                 <h2 className="blog-title">{key}</h2>
                 {/* Check if the key is "Why GIKI" to apply special formatting */}
-                {key === "Why GIKI" ? (
+                {key === jsonData["Why this University"] ? (
                   <p
                     className="blog-content"
                     style={{ whiteSpace: "pre-line" }}
@@ -63,4 +71,3 @@ const BlogComponent = () => {
   );
 };
 
-export default BlogComponent;
