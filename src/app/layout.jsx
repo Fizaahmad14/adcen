@@ -43,13 +43,13 @@ export default function RootLayout({ children }) {
       <body className="font-jost bg-gray-200">
         <Providers>
           <Suspense fallback={<Loading />}>
-            {/* <AuthProvider session={session}> */}
+            <AuthProvider session={session}>
             <WishlistProvider>
               <Header />
               {children}
               <Footer />
             </WishlistProvider>
-            {/* </AuthProvider> */}
+            </AuthProvider>
           </Suspense>
         </Providers>
       </body>

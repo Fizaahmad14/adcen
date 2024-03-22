@@ -108,6 +108,9 @@ export default function Header() {
         <NavbarItem>
           <WishList />
         </NavbarItem>
+        <NavbarItem>
+          <Login />
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu>
