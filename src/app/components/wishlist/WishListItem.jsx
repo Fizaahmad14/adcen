@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React from "react";
+import { Image } from "@nextui-org/react";
 import { MdDeleteOutline } from "react-icons/md";
 import { Button } from "@nextui-org/react";
 
@@ -19,7 +18,7 @@ export default function WishListItem({ item, onDelete }) {
         <div className="bg-white rounded-md space-y-4 p-2 shadow-md">
           <div className="flex justify-between items-center w-full">
             {/* Name */}
-            <h3 className="text-md">{item.Name}</h3>
+            <h3 className="text-md font-poppins">{item.Name}</h3>
             {/* Del Icon */}
             <Button
               size="sm"
@@ -40,12 +39,7 @@ export default function WishListItem({ item, onDelete }) {
             </div>
 
             {/* Image */}
-            <Image
-              width={50}
-              // className="lg:h-48 md:h-36 w-full object-cover object-center"
-              src={item.src}
-              alt={item.Name}
-            />
+            <Image width={50} src={item.src} alt={item.Name} />
           </div>
         </div>
       </div>

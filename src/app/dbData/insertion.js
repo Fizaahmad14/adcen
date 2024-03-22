@@ -18,17 +18,17 @@ export default async function testUniDetailsModel() {
                   Food: item.fees.Food
               },
               information: {
-                "Historical Perspective": item.information["Historical Perspective"],
-                "Established/Charter": item.information["Established/Charter"],
-                "University Charter": item.information["University Charter"],
-                "Vision": item.information["Vision"],
-                "Mission Statement": item.information["Mission Statement"],
-                "Research and Discovery": item.information["Research and Discovery"],
-                "Teaching and Learning": item.information["Teaching and Learning"],
-                "Outreach and Public Service": item.information["Outreach and Public Service"],
-                "International Linkages": item.information["International Linkages"],
-                "Why this University": item.information["Why this University"]
-            }
+                  "Historical Perspective": item.information["Historical Perspective"],
+                  "Established/Charter": item.information["Established/Charter"],
+                  "University Charter": item.information["University Charter"],
+                  "Vision": item.information["Vision"],
+                  "Mission Statement": item.information["Mission Statement"],
+                  "Research and Discovery": item.information["Research and Discovery"],
+                  "Teaching and Learning": item.information["Teaching and Learning"],
+                  "Outreach and Public Service": item.information["Outreach and Public Service"],
+                  "International Linkages": item.information["International Linkages"],
+                  "Why this University": item.information["Why this University"]
+              }
           });
       }));
   
@@ -41,5 +41,4 @@ export default async function testUniDetailsModel() {
     } catch (error) {
       console.error('Error testing UniDetailsModel:', error);
     }
-  }
-  
+}

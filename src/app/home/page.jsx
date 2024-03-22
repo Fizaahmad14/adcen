@@ -30,7 +30,7 @@ export default async function HomePage() {
         <section className="py-20">
           <TestBtn />
         </section>
-        <hr className="h-[,5px] border-[.5px] border-gray-300 text-green-500" />
+        <hr className="h-[,5px] container border-[.5px] border-gray-300 text-green-500" />
         <section className="pt-20 pb-10">
           <div className="container mx-auto px-5">
             <h2 className="text-3xl pb-6 leading-tight font-poppins underline underline-offset-4 decoration-green-500">
@@ -39,7 +39,7 @@ export default async function HomePage() {
           </div>
           <Explore
             exploreItems={exploreItems}
-            itemLength={4}
+            itemLength={8}
             nameArr={uniNames}
           />
           <div className="flex container mx-auto pt-10 justify-center px-5 w-full">

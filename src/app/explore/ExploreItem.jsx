@@ -25,7 +25,7 @@ export default function ExploreItem({ addItem, delItem, item }) {
 
   return (
     <>
-      <div className="h-full w-full rounded space-y-6 border p-6 bg-gray-50 border-gray-500 flex flex-col ">
+      <div className="h-full w-full rounded space-y-6 border p-6 bg-white border-gray-500 flex flex-col ">
         <div className="w-full  grid place-items-center">
           <Image
             width={150}

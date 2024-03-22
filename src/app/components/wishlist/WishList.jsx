@@ -14,8 +14,11 @@ import WishListItem from "./WishListItem";
 import { FaRegHeart } from "react-icons/fa";
 
 import { useWishlist } from "./WishListContext";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function WishList() {
+  const pathName = usePathname();
   const { wishListItems, wishlistCount, delItem } = useWishlist();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -60,22 +63,30 @@ export default function WishList() {
                     No items To Display
                   </p>
                 ) : (
-                  wishListItems.map((x, index) => {
+                  wishListItems.map((x) => {
                     return (
                       <>
                         <WishListItem
                           item={x}
-                          key={index}
+                          key={x.Name}
                           onDelete={handleDelItem}
                         />
-                        {/* We have use key here, q k agr hum map se render krate hain kisi cheez ko tu ik unique key bhejni perti he */}
                       </>
                     );
                   })
                 )}
               </ModalBody>
               <ModalFooter>
-                <Button color="primary" onPress={onClose}>
+                <Button
+                  isDisabled={
+                    wishListItems.length === 0 ||
+                    pathName === "/apply"
+                  }
+                  as={Link}
+                  href="/apply"
+                  className="bg-green-500 text-white"
+                  onPress={onClose}
+                >
                   Apply Now
                 </Button>
               </ModalFooter>

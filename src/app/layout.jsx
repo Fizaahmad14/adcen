@@ -1,14 +1,13 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 import { session } from "next-auth";
 import AuthProvider from "../../components/AuthProvider";
 import { Jost, Poppins } from "next/font/google";
 import { Providers } from "./providers";
-import {
-  FavoritesProvider,
-  WishlistProvider,
-} from "./components/wishlist/WishListContext";
+import { WishlistProvider } from "./components/wishlist/WishListContext";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -43,13 +42,15 @@ export default function RootLayout({ children }) {
     >
       <body className="font-jost bg-gray-200">
         <Providers>
-        <AuthProvider session={session}>
-          <WishlistProvider>
-            <Header />
-            {children}
-            <Footer />
-          </WishlistProvider>
-          </AuthProvider>
+          <Suspense fallback={<Loading />}>
+            {/* <AuthProvider session={session}> */}
+            <WishlistProvider>
+              <Header />
+              {children}
+              <Footer />
+            </WishlistProvider>
+            {/* </AuthProvider> */}
+          </Suspense>
         </Providers>
       </body>
     </html>

@@ -1,8 +1,7 @@
 import { Slider } from "@nextui-org/react";
-import { maxCost } from "./costContent";
 import { useState } from "react";
 
-export default function Filter({ handleValueChange }) {
+export default function Filter({ handleValueChange, maxCost }) {
   const [tuitionValue, settuitionValue] = useState(maxCost.Tuition);
   const [hostelValue, sethostelValue] = useState(maxCost.Hostel);
   const [transportValue, settransportValue] = useState(
@@ -12,11 +11,10 @@ export default function Filter({ handleValueChange }) {
 
   return (
     <>
-      <div className="">
+      <div className="space-y-4">
         <h3 className="text-lg font-medium leading-tight font-poppins underline underline-offset-4 decoration-green-500">
           Filters
         </h3>
-        <hr className="mt-2 mb-4" />
         <div className="space-y-6 ">
           {/* Tuition */}
           <Slider

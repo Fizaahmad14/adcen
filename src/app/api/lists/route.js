@@ -1,14 +1,15 @@
-import mongoose from "mongoose";
-import { connectToDB  } from "../../../../utils/db";
-// import testUniDetailsModel from "@/app/dbData/insertion";
-
+import { connectToDB } from "../../../../utils/db";
 import UniDetailsModel from "../../../../models/uniDetails";
+
 
 import { NextResponse } from "next/server";
 export async function GET(req) {
   try {
     await connectToDB();
     const unis = await UniDetailsModel.find();
+
+    // console.log(unis);
+
     return new NextResponse(JSON.stringify(unis), {
       status: 200,
     });
@@ -19,4 +20,5 @@ export async function GET(req) {
   }
 }
 
-// testUniDetailsModel();
+
+

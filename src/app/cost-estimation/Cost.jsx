@@ -1,23 +1,11 @@
 "use client";
 import { useState } from "react";
 import Filter from "./Filter";
-import { maxCost, universities } from "./costContent";
 import CostItem from "./CostItem";
-import exploreItems from "../explore/ExploreContent";
 import Results from "./Results";
 import Sort from "./Sort";
 
-export default function Cost() {
-  for (let index = 0; index < universities.length; index++) {
-    exploreItems[index].fees = {
-      Tuition: universities[index].Tuition,
-      Hostel: universities[index].Hostel,
-      Transport: universities[index].Transport,
-      Food: universities[index].Food,
-    };
-    exploreItems[index].id = index;
-  }
-
+export default function Cost({ exploreItems, maxCost }) {
   const [result, setresult] = useState(exploreItems.length);
   const [tuitionValue, settuitionValue] = useState(maxCost.Tuition);
   const [hostelValue, sethostelValue] = useState(maxCost.Hostel);
@@ -75,18 +63,22 @@ export default function Cost() {
         <h2 className="text-3xl text-center leading-tight font-poppins underline underline-offset-4 decoration-green-500">
           Cost Estimation
         </h2>
-        <div className="py-10 flex gap-4">
+        <div className="py-10 flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:gap-4">
           {/* Filters */}
-          <div className="rounded-md  h-max min-w-max w-1/4  bg-gray-50 shadow-md p-3">
-            <div className="  ">
-              <Filter handleValueChange={handleCostValue} />
-            </div>
-          </div>
-          <div className="w-[75%] space-y-3">
+          <div className="rounded-md space-y-4 h-max min-w-max sm:w-1/4  bg-white shadow-md p-3">
+            <Filter
+              maxCost={maxCost}
+              handleValueChange={handleCostValue}
+            />
+            <hr />
             <div className="flex items-center justify-between ">
               <Results results={result} />
               <Sort sortFunction={whichSort} />
             </div>
+          </div>
+
+          <hr className="border h-[.5px] border-gray-400/50 sm:hidden" />
+          <div className="sm:w-[75%] space-y-3">
             {exploreItems
               .filter((item) => {
                 return (

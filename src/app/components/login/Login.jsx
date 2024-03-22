@@ -8,7 +8,6 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   Checkbox,
   Input,
@@ -17,9 +16,8 @@ import {
 import { MailIcon } from "./MailIcon.jsx";
 import { LockIcon } from "./LockIcon.jsx";
 import { FaRegUser } from "react-icons/fa";
-import { signOut,signIn,useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-
+import { signOut, signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure("");
@@ -46,25 +44,31 @@ export default function Login() {
   const [showSignOut, setShowSignOut] = useState(false);
   const handleLogout = async () => {
     await signOut(); // Call the signOut function to log the user out
-    router.push('/'); // Redirect to the home page or any other page after logout
+    router.push("/"); // Redirect to the home page or any other page after logout
   };
 
-  const {data:session}=useSession()
-  const router=useRouter()
+  const { data: session } = useSession();
+  const router = useRouter();
 
-  if(session){
-    router.replace('/')
+  if (session) {
+    router.replace("/");
     return (
       <div>
         {session && (
-          <span className="cursor-pointer" onClick={() => setShowSignOut(!showSignOut)}>
-          Welcome, {session.user.name}
-          {showSignOut && (
-            <button onClick={handleLogout} style={{ marginLeft: '8px' }}>
-              Sign Out
-            </button>
-          )}
-        </span>
+          <span
+            className="cursor-pointer"
+            onClick={() => setShowSignOut(!showSignOut)}
+          >
+            Welcome, {session.user.name}
+            {showSignOut && (
+              <button
+                onClick={handleLogout}
+                style={{ marginLeft: "8px" }}
+              >
+                Sign Out
+              </button>
+            )}
+          </span>
         )}
       </div>
     );
@@ -160,9 +164,10 @@ export default function Login() {
                     color="success"
                     variant="flat"
                     endContent={<FaGoogle />}
-                    onClick={()=>{
-                      signIn("google")
-                    }}>
+                    onClick={() => {
+                      signIn("google");
+                    }}
+                  >
                     Continue with Google
                   </Button>
                 </div>

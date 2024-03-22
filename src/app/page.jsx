@@ -1,7 +1,5 @@
-import React from "react";
-import Login from "./login/page";
 import HomePage from "./home/page";
-import SignupPage from "./signup/page";
+import Loading from "./loading";
 
 export const metadata = {
   title: "Adcen - Login",
@@ -12,6 +10,7 @@ export default function Home() {
   return (
     <>
       <HomePage />
+      {/* <Loading /> */}
       {/* <SignupPage /> */}
     </>
   );
