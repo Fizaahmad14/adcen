@@ -1,24 +1,16 @@
-"use client";
-import React from "react";
+import { fetchExploreItems } from "../contexts/fetchData";
 import Explore from "./Explore";
-import exploreItems, { uniNames } from "./ExploreContent";
 
-import { notFound } from "next/navigation";
-
-
-async function getData() {
-    const res = await fetch("http://localhost:3000/api/lists", {cache: "no-store"});
-    if (!res.ok) return notFound();
-    return res.json();
-}
-
-const data = getData();
-console.log(data);
-
-export default function Explores() {
+export default async function Explores() {
+  const exploreItems = await fetchExploreItems();
+  const uniNames = [];
+  exploreItems.forEach((item) => {
+    uniNames.push(item.Name);
+  });
   return (
     <>
       <Explore
+        exploreItems={exploreItems}
         itemLength={exploreItems.length}
         nameArr={uniNames}
         topSpacing={"pt-28 mb-24"}

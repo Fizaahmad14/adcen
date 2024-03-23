@@ -1,0 +1,67 @@
+/* styles.css */
+
+/* Picture */
+.blog-cover {
+  /* position: absolute; */
+  /* top: 5px; Adjust the top position */
+  /* left: 5px; Adjust the left position */
+  /* You can also adjust other properties like width, height, etc. */
+  width: 1510px;
+  height: 540px;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  /*z-index: -5;  Move the image behind other content */
+}
+
+/* Main container */
+.blog-container {
+  padding: 20px; /* Adjust padding for content spacing */
+  //margin-top: 550px;
+}
+
+/* Individual blog post */
+.blog-post {
+  /* margin-bottom: 20px; */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog title */
+.blog-title {
+  /* margin-top: 0; */
+  color: #4caf50; /* Light green */
+  font-size: 19px; /* Adjust the font size as needed */
+}
+
+/* Blog content */
+.blog-content {
+  color: #333333;
+}
+
+/* Horizontal rule */
+.blog-post:not(:last-child) {
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Additional styling for the content container */
+.blog-content-container {
+  /* margin-top: calc(
+    100px + 20px
+  );  */
+  /* Adjust margin to start content below the image and header */
+  padding-top: 20px; /* Add padding to ensure space between image and content */
+}
+
+/* Vibrant bullet styling */
+.blog-content-container ul {
+  list-style-type: none; /* Remove default bullet */
+  padding-left: 20px; /* Add padding to create space for custom bullet */
+}
+
+.blog-content-container ul li::before {
+  content: "\2022"; /* Use a bullet character (•) as the list item marker */
+  color: #4caf50; /* Light green */
+  font-size: 16px; /* Adjust font size as needed */
+  margin-right: 5px; /* Add space between bullet and text */
+}

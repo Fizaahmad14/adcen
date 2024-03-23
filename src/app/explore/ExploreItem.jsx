@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
@@ -25,16 +25,17 @@ export default function ExploreItem({ addItem, delItem, item }) {
 
   return (
     <>
-      <div className="h-full border bg-gray-50 border-gray-500 flex flex-col ">
-        <div className="p-16">
+      <div className="h-full w-full rounded space-y-6 border p-6 bg-white border-gray-500 flex flex-col ">
+        <div className="w-full  grid place-items-center">
           <Image
+            width={150}
             // className="lg:h-48 md:h-36 w-full object-cover object-center"
             src={item.src}
-            alt="agri"
+            alt={item.Name}
           />
         </div>
 
-        <div className="p-6 flex flex-col justify-between h-full ">
+        <div className=" flex flex-col justify-between h-full ">
           <div>
             <h1 className="font-poppins text-lg font-medium text-gray-900 mb-3">
               {item.Name}
