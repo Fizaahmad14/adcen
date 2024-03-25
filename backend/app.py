@@ -1,10 +1,16 @@
 from flask import Flask, jsonify, request
 import pandas as pd
+from flask_cors import CORS
+
 
 app = Flask(__name__)
-
+CORS(app, supports_credentials=True, origins='http://localhost:3000')
 # Load your DataFrame from the CSV file
 merged_df = pd.read_csv('temp.csv')
+
+# Define global variables to keep track of counts
+correct_count = 0
+incorrect_count = 0
 
 # Function to generate the next question based on difficulty level
 def generate_question(current_difficulty, asked_questions):
@@ -22,7 +28,6 @@ asked_questions = []
 def get_question():
     global current_difficulty
     global asked_questions
-
     current_question = generate_question(current_difficulty, asked_questions)
 
     if current_question.empty:
@@ -32,17 +37,18 @@ def get_question():
 
         # Get a new question
         current_question = generate_question(current_difficulty, asked_questions)
-
     question_text = current_question['Question'].iloc[0]
     options = [current_question['Option A'].iloc[0], current_question['Option B'].iloc[0], current_question['Option C'].iloc[0], current_question['Option D'].iloc[0]]
 
     # Add the current question to the list of asked questions
     asked_questions.append(question_text)
-
     return jsonify({'question': question_text, 'options': options})
 
 @app.route('/check_answer', methods=['POST'])
 def check_user_answer():
+    global correct_count
+    global incorrect_count
+
     user_answer = request.json['answer']
 
     # Get the current question
@@ -52,8 +58,17 @@ def check_user_answer():
     correct_answer = current_question['Answer'].iloc[0].strip().lower()
     user_input = user_answer.strip().lower()
 
+    print(f"User's Input: '{user_input}'")
+    print(f"Correct Answer: '{correct_answer}'")
+
     # Check if the user's answer is correct
     is_correct = user_input == correct_answer
+
+    # Update the counter based on the correctness
+    if is_correct:
+        correct_count += 1
+    else:
+        incorrect_count += 1
 
     # Prepare the response message
     if is_correct:
@@ -67,7 +82,7 @@ def check_user_answer():
     else:
         feedback = f"Oops! The correct answer is {correct_answer}."
 
-    return jsonify({'message': message, 'feedback': feedback})
+    return jsonify({'message': message, 'correct_count': correct_count, 'incorrect_count': incorrect_count, 'total_asked': len(asked_questions), 'feedback': feedback})
 
 if __name__ == '__main__':
     app.run(debug=True)

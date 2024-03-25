@@ -1,5 +1,7 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+//import { useClient } from 'next/data-client'; // Import useClient
 import './style.css'; // Import CSS file
 
 const QuizComponent = ({ testType }) => {
@@ -12,22 +14,18 @@ const QuizComponent = ({ testType }) => {
   const [currentDifficulty, setCurrentDifficulty] = useState('easy');
   const [mergedData, setMergedData] = useState([]);
 
-  useEffect(() => {
-    // Fetch the merged data from the Flask backend when the component mounts
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/merged_data');
-        setMergedData(response.data);
-      } catch (error) {
-        console.error('Error fetching merged data:', error);
-      }
-    };
-    fetchData();
+
+   useEffect(() => {
+    setCurrentDifficulty('easy');
+    setCorrectCount(0);
+    setIncorrectCount(0);
+    setAskedQuestions([]);
+    generateQuestion();
   }, []);
 
   const generateQuestion = async () => {
     try {
-      const response = await axios.post('/get_question', { currentDifficulty, askedQuestions });
+      const response = await axios.post('http://127.0.0.1:5000/get_question', { currentDifficulty, askedQuestions });
       const { question, options } = response.data;
       setQuestion(question);
       setOptions(options);
@@ -38,12 +36,14 @@ const QuizComponent = ({ testType }) => {
 
   const checkAnswer = async (userAnswer) => {
     try {
-      const response = await axios.post('/check_answer', { answer: userAnswer });
+      const response = await axios.post('http://127.0.0.1:5000/check_answer', { answer: userAnswer });
       const { message, correct_count, incorrect_count, total_asked, feedback } = response.data;
       setFeedback(feedback);
       setCorrectCount(correct_count);
       setIncorrectCount(incorrect_count);
-      setAskedQuestions(total_asked);
+      //this will make sure that the total question count is also displayed
+      setAskedQuestions(prevAskedQuestions => [...prevAskedQuestions, response.data.askedQuestions]);
+      generateQuestion();
     } catch (error) {
       console.error('Error checking answer:', error);
     }
@@ -54,16 +54,12 @@ const QuizComponent = ({ testType }) => {
   };
 
   const resetQuiz = () => {
-    setCurrentDifficulty('easy');
-    setCorrectCount(0);
-    setIncorrectCount(0);
-    setAskedQuestions([]);
-    generateQuestion();
+    window.location.href = '/result';
   };
 
   return (
     <div>
-      <h1>Quiz</h1>
+      <h1>         </h1>
       {/* Render quiz components */}
       <div id="quiz-container">
         <h1>Mock Test</h1>

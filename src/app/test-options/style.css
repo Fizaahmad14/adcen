@@ -1,4 +1,4 @@
-/* style.css */
+/* static/style.css */
 
 body {
   font-family: 'Arial', sans-serif;
@@ -15,10 +15,14 @@ body {
   text-align: center;
 }
 
-.buttons {
-  margin-top: 300px;
+h1 {
+  font-size: 25px; /* Increase font size */
+  font-weight: bold; /* Make the font bold */
 }
 
+.buttons {
+  margin-top: 20px;
+}
 
 .button {
   display: inline-block;
@@ -30,14 +34,10 @@ body {
   background-color: #28a745; /* Green color */
   border: 2px solid #218838; /* Darker green border */
   margin: 10px;
-  margin-bottom: 30px; /* Increase margin to create more space */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-
 .button:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218840; /* Darker green on hover */
 }
-
-

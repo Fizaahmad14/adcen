@@ -11,6 +11,8 @@ body {
     height: 100vh;
 }
 
+
+
 #quiz-container {
     background-color: #fff;
     padding: 20px;
@@ -19,6 +21,7 @@ body {
     max-width: 600px;
     width: 100%;
     box-shadow: 0 0 12px rgba(80,199,53,1);
+    margin: 0 auto;
 }
 
 h1 {
@@ -67,6 +70,8 @@ h1 {
 #submit-btn:hover {
     background-color: #45a049;
 }
+
+
 
 .end-button {
     background-color: #dc3545; /* Red color */
