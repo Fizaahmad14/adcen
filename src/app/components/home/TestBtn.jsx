@@ -14,7 +14,7 @@ export default function TestBtn() {
             </p>
           </div>
           <Link
-            href="/take-a-test"
+            href="/test-options"
             className="bg-gray-100 rounded hover:bg-white text-gray-900 px-4 py-2 text-base"
           >
             Take a Test

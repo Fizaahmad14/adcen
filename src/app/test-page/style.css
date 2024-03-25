@@ -1,0 +1,92 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+#quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(80,199,53,1);
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#options {
+    list-style-type: none;
+    padding: 0;
+}
+
+#options li {
+    margin-bottom: 10px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#options li:hover {
+    background-color: #ddd;
+}
+
+#user-answer {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+.end-button {
+    background-color: #dc3545; /* Red color */
+    color: #fff; /* White text color */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* New styles for positioning */
+    margin-top: 10px;
+    margin-left: auto; /* Automatically move the button to the right */
+    display: block; /* Make it a block element to occupy the full width */
+}
+
+.end-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
