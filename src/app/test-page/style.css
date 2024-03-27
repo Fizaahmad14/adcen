@@ -11,8 +11,6 @@ body {
     height: 100vh;
 }
 
-
-
 #quiz-container {
     background-color: #fff;
     padding: 20px;
@@ -21,8 +19,10 @@ body {
     max-width: 600px;
     width: 100%;
     box-shadow: 0 0 12px rgba(80,199,53,1);
-    margin: 0 auto;
+    
 }
+
+
 
 h1 {
     text-align: center;
@@ -51,27 +51,9 @@ h1 {
     background-color: #ddd;
 }
 
-#user-answer {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+#count-container {
+    margin-top: 10px;
 }
-
-#submit-btn {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#submit-btn:hover {
-    background-color: #45a049;
-}
-
-
 
 .end-button {
     background-color: #dc3545; /* Red color */
@@ -90,3 +72,57 @@ h1 {
 .end-button:hover {
     background-color: #c82333; /* Darker red on hover */
 }
+
+.result-container {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 500px;
+  }
+  
+  .result-heading {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .result-details {
+    margin-top: 20px;
+  }
+  
+  .result-score,
+  .result-questions {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .retake-button {
+    display: block;
+    background-color: #4caf50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .retake-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+
+  /* the feedback on quiz page */
+  #result-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733; /* Red color for emphasis */
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  
