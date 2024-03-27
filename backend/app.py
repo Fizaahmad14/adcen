@@ -8,9 +8,9 @@ CORS(app, supports_credentials=True, origins='http://localhost:3000')
 # Load your DataFrame from the CSV file
 merged_df = pd.read_csv('temp.csv')
 
-# Define global variables to keep track of counts
-correct_count = 0
-incorrect_count = 0
+correct_count = 0  # Initialize outside of the function
+incorrect_count = 0  # Initialize outside of the function
+
 
 # Function to generate the next question based on difficulty level
 def generate_question(current_difficulty, asked_questions):
@@ -46,8 +46,10 @@ def get_question():
 
 @app.route('/check_answer', methods=['POST'])
 def check_user_answer():
-    global correct_count
-    global incorrect_count
+    # Define global variables to keep track of counts
+    global correct_count  # Access global variable
+    global incorrect_count  # Access global variable
+
 
     user_answer = request.json['answer']
 
