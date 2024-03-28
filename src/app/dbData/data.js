@@ -13,6 +13,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+      "image": "/images/uniImages/giki.jpg",
       "Historical Perspective": "It was founded by the former President of Pakistan, Ghulam Ishaq Khan, in 1993. Since its establishment, the institute has consistently attracted the country's most influential scientists. GIKI is known to be a competitive institution with a low acceptance rate requiring students to show extraordinary academic excellence and capabilities with strong financial footing to be accommodated.",
       "Established/Charter": "1993",
       "University Charter": "GIK Institute helps you to discover and refine your abilities, guides you through new obstacles, and encourages you to help others along their journey. With a supportive community and ample opportunities to get involved, GIK Institute is the perfect place to pursue your passions and achieve your goals.",
@@ -39,6 +40,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/vu.jpg",
     "Historical Perspective": "The Virtual University of Pakistan (VU) was established in 2002 as a public university with a distinctive focus on distance learning and online education. Recognizing the evolving landscape of education, VU aimed to increase accessibility to quality education for a diverse range of learners, particularly those unable to attend traditional on-campus programs.",
     "Established/Charter": "2002",
     "University Charter": "2012",
@@ -65,6 +67,7 @@ const data = [
       "Food": "5000"
     },
     "information" : {
+    "image": "/images/uniImages/uol.png",
     "Historical Perspective": "The University of Lahore (UOL) was founded in 1999 as a private institution of higher education. Since its establishment, UOL has evolved into one of the largest private universities in Pakistan, offering a diverse range of academic programs.",
     "Established/Charter": "1999",
     "University Charter": "2002",
@@ -91,6 +94,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/ucp.jpg",
     "Historical Perspective": "The University of Central Punjab (UCP) was established in 2002 as a private institution of higher education. Since its inception, UCP has grown to become one of the prominent private universities in Pakistan, offering a diverse array of academic programs.",
     "Established/Charter": "2002",
     "University Charter": "2012",
@@ -117,6 +121,7 @@ const data = [
       "Food": "4500"
     },
     "information" : {
+    "image": "/images/uniImages/arid.jpg",
     "Historical Perspective": "Arid Agriculture University (AAU) was established in 1994 with the goal of addressing agricultural challenges in arid and semi-arid regions. Since its inception, the university has been a center for agricultural research and education, attracting prominent scientists and scholars in the field.",
     "Established/Charter": "1994",
     "University Charter": "2011",
@@ -143,6 +148,7 @@ const data = [
       "Food": "5000"
     },
     "information" : {
+    "image": "/images/uniImages/uaf.jpeg",
     "Historical Perspective": "The University of Agriculture, Faisalabad (UAF), traces its roots back to 1906 when it was established as the Punjab Agricultural College and Research Institute. It attained university status in 1961 and has since evolved into a leading institution for agricultural education and research in Pakistan.",
     "Established/Charter": "1906/University status in 1961",
     "University Charter": "2002",
@@ -169,6 +175,7 @@ const data = [
       "Food": "6000"
     },
     "information" : {
+    "image": "/images/uniImages/buet.jpg",
     "Historical Perspective": "Balochistan University of Information Technology, Engineering and Management Sciences (BUITEMS) has its origins in [Year], with a focus on providing quality education in information technology, engineering, and management sciences. Since its establishment, BUITEMS has grown to become a prominent institution in Balochistan, contributing to the educational and technological landscape of the region.",
     "Established/Charter": "18 July 2002",
     "University Charter": "20012",
@@ -195,6 +202,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/sirsyed.jpg",
     "Historical Perspective": "Sir Syed University of Engineering & Technology (SSUET) traces its roots back to 1994 when it was established in Karachi, Pakistan. Founded by the Aligarh Muslim University Old Boys Association of Pakistan, SSUET has emerged as a prominent institution dedicated to engineering and technology education.",
     "Established/Charter": "Established in 1994. Specific details about the university charter are not provided in the available information.",
     "University Charter": "2002",
@@ -221,6 +229,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/preston.jpg",
     "Historical Perspective": "Preston University, a private institution of higher education, has a history dating back to its establishment in 1984. Over the years, Preston University has become a reputable institution offering diverse undergraduate and postgraduate programs across multiple disciplines.",
     "Established/Charter": "Established in 1984. Specific details about the university charter are not provided in the available information.",
     "University Charter": "2002",
@@ -247,6 +256,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/pieas.jpg",
     "Historical Perspective": "Nestled in the serene setting of a beautiful countryside, Pakistan Institute of Engineering and Applied Sciences (PIEAS), Islamabad, is recognized as a preeminent federal public university devoted to higher education in specific disciplines of engineering, natural sciences and formal sciences. Although PIEAS offers BS, MS, M Phil and PhD degree programs, yet the postgraduate degree programs dominate. In addition to the degree programs, PIEAS also offers specialized short courses to engineers, scientists and other professionals for their continuing professional development.",
     "Established/Charter": "1967/2000",
     "University Charter": "August 2000",
@@ -273,6 +283,7 @@ const data = [
       "Food": "500"
     },
     "information" : {
+    "image": "/images/uniImages/ned.jpg",
     "Historical Perspective": "The NED University of Engineering & Technology, was established in March 1977 under an act of the Provincial Assembly of Sindh after upgrading of the former NED Government Engineering College, which was set up in 1921. The NED University is thus one of the oldest institution in Pakistan for teaching and producing Engineering graduates. Prior to this, the D.J.Sindh College , used to run classes to train subordinates for the Sindh P.W.D., the Municipalities and Local Boards.",
     "Established/Charter": "1977/2001",
     "University Charter": "2001",
@@ -299,6 +310,7 @@ const data = [
       "Food": "13000"
     },
     "information" : {
+    "image": "/images/uniImages/nust.jpg",
     "Historical Perspective": "National University of Sciences & Technology (NUST) was established in March 1991 for the promotion of higher education in the country, especially in the fields of science and technology, by providing a stable and disciplined academic environment together with need-based research pertinent to industrial requirements. The university was granted its Charter in 1993. Over the years, it has expanded in scope, services and stature, and has emerged as a leading comprehensive university in the public sector.",
     "Established/Charter": "1991/1993",
     "University Charter": "1993",
@@ -325,6 +337,7 @@ const data = [
       "Food": "9000"
     },
     "information" : {
+    "image": "/images/uniImages/ntu.jpg",
     "Historical Perspective": "The idea of establishing a Textile Institute of world fame was conceived by a group of visionary industrialists in 1954. To realize this idea the Government of Punjab joined hands with the leading textile industrialists to form an Institute of Textile Technology in Faisalabad (then Lyallpur) and provided sixty-two acres of state owned land free of cost. Kohinoor Industries, Colony Textile Mills, Dawood Foundation and Lyallpur Cotton Mills provided funds to the tune of Rs.2.5 Millions, which were utilized for the construction of building and provision of other infrastructure. The Government of U.K. provided the bulk of equipment and machinery, along with the services of experts under Colombo Plan. Field Marshall Muhammad Ayub Khan, the then President of Pakistan, laid the foundation stone of the Institute, on the 12th of October 1959.",
     "Established/Charter": "October 1959/2002",
     "University Charter": "2002",
@@ -351,6 +364,7 @@ const data = [
       "Food": "5000"
     },
     "information" : {
+    "image": "/images/uniImages/mehran.jpg",
     "Historical Perspective": "The main fields of development have been related to the enhancement of agriculture, establishment and up-gradation of industries and exploration of its indigenous resources. This development has resulted in increased demand for qualified engineers in different fields in addition to other professionals. In order to meet this demand and to provide an opportunity of engineering education to the people hailing from the interior of Sindh Province, Sindh University Engineering College was established in 1963 as a constituent college of University of Sindh (then spelt 'Sind') in Jamshoro about 15 km. from Hyderabad on the right bank of river Indus.",
     "Established/Charter": "1963/2001",
     "University Charter": "2001",
@@ -377,6 +391,7 @@ const data = [
       "Food": "85000"
     },
     "information" : {
+    "image": "/images/uniImages/lums.jpg",
     "Historical Perspective": "In 1984, Syed Babar Ali, a renowned businessman in Pakistan, recognized the shortage of qualified managers in the country. He proposed to establish a world-class university that would attract and retain the highest caliber of students and faculty. He shared this idea with fellow businessman and close friend, Abdul Razak Dawood, who was in full support of the vision. The university has since then expanded, launching a liberal arts undergraduate school in 1994, an engineering school in 2008, a law school in 2004 and an education school in 2017.",
     "Established/Charter": "1984/1985",
     "University Charter": "1985",
@@ -403,6 +418,7 @@ const data = [
       "Food": "5082"
     },
     "information" : {
+    "image": "/images/uniImages/LCWU.jpg",
     "Historical Perspective": "Lahore College for Women University, established in May 1922 as an intermediate residential college, was originally housed in a building on Hall Road, Lahore, with strength of 60 students (25 boarders) and 13 staff members. By 1950, the College strength increased to 600 students and was shifted to the present building on Jail Road.",
     "Established/Charter": "May 1922/1998",
     "University Charter": "1998",
@@ -429,6 +445,7 @@ const data = [
       "Food": "3700"
     },
     "information" : {
+    "image": "/images/uniImages/jinnah_university.jpg",
     "Historical Perspective": "The Jinnah University for Women is a private research university in Karachi, Sindh, Pakistan. It is an all-woman university and is the first women's university in the country. Established as a post-graduate college, its status as full-fledged university was upgraded in 1998 the Sindh Assembly.",
     "Established/Charter": "1998/2001",
     "University Charter": "2001",
@@ -455,6 +472,7 @@ const data = [
       "Food": "5000"
     },
     "information" : {
+    "image": "/images/uniImages/islamia.jpg",
     "Historical Perspective": "Islamia College Peshawar, the symbol of academic excellence is rich in history. Its building, which is the best embodiment of Muslim civilization in south Asia and its lush green lawns attract visitors from all over the country and abroad. It is not only the culminating point of the Aligarh Movement, it is in fact the beautiful combination of Aligarh and Deoband Schools of Thought. Being the breeding ground of the Pashtun intelligentsia, this great seat of learning is the place, where diamonds are skimmed since 1913. Moreover, Islamia College Peshawar was destined to become mother institution of the three universities and several colleges on its campus. The credit of this goes to Sir Sahibzada Abdul Qayyum, who is commonly called The Sir Sayyed of the Frontier and his sincere colleagues, who founded Islamia College Peshawar in 1913.",
     "Established/Charter": "1913/2016",
     "University Charter": "2016",
@@ -481,6 +499,7 @@ const data = [
       "Food": "3000"
     },
     "information" : {
+    "image": "/images/uniImages/iqra.jpg",
     "Historical Perspective": "Iqra University traces its geneses to January 1998, when it started its operations in Karachi. The Government of Sindh chartered the University; vide Sindh Ordinance VI of 2000. Currently, Iqra University has campuses in Karachi and Islamabad. The aim of top management of Iqra University is to develop an institution of higher learning that provides quality education to the people of Pakistan with an affordable price.",
     "Established/Charter": "January 1998/2000",
     "University Charter": "21-Jun-2000",
@@ -507,6 +526,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/fast.jpg",
     "Historical Perspective": "Founded as a Federally Chartered University in July 2000, the National University of Computer and Emerging Sciences is a premier University of Pakistan, renowned for quality and impact of its students in the development of local software and other industries. The university has five modern campuses at Karachi, Lahore, Islamabad, Peshawar and Chiniot-Faisalabad. These campuses provide world class educational environment and recreational facilities to about over 11,000 students, around one quarter are female and over 500 skilled faculty members.",
     "Established/Charter": "2000/2000",
     "University Charter": "July 2000",
@@ -533,6 +553,7 @@ const data = [
       "Food": "17000"
     },
     "information" : {
+    "image": "/images/uniImages/comsats.jpg",
     "Historical Perspective": "The CUI functions under the governance of the Senate which is chaired by the Chancellor of the university. The President of Islamic Republic of Pakistan is the Chancellor of the University. Besides, Islamabad it has campuses in Lahore, Abbottabad, Wah, Attock, Sahiwal, Vehari and a Virtual campus as well.",
     "Established/Charter": "1998/August 2000",
     "University Charter": "April 2018",
@@ -559,6 +580,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/cusit.jpeg",
     "Historical Perspective": "City University of Science & Information Technology, (CUSIT) Peshawar is one of the first private-sector universities, chartered by the government of Khyber Pakhtunkhwa, recognized by the Higher Education Commission (HEC), Accredited by the Pakistan Engineering Council (PEC).",
     "Established/Charter": "1979/2001",
     "University Charter": "August 30th, 2001",
@@ -585,6 +607,7 @@ const data = [
       "Food": "9000"
     },
     "information" : {
+    "image": "/images/uniImages/BNU.jpg",
     "Historical Perspective": "Beaconhouse National University (BNU) is Pakistan's first not-for-profit Liberal Arts University, founded in 2003 to provide tertiary education in the arts, design, architecture, media, humanities and social sciences, business and information technology. BNU was awarded the degree awarding charter by the Government of the Punjab in 2005. The institution was established through significant donations from a number of benefactors including the Kasuri family, the Dawood family, Dr. Parvez Hassan, Mr. Izzat Majeed and the Government of Punjab, to name a few.",
     "Established/Charter": "1913/2016",
     "University Charter": "2016",
@@ -611,6 +634,7 @@ const data = [
       "Food": "4000"
     },
     "information" : {
+    "image": "/images/uniImages/bzu.jpg",
     "Historical Perspective": "Multan has maintained its central position and centuries old cultural heritage and therefore suited ideally to become a center of learning. Thus the University of Multan was established in 1975 by an Act of the Punjab Legislative Assembly. To pay homage to the Great Saint, the name was changed from University of Multan to Bahauddin Zakariya University in 1979.",
     "Established/Charter": "1975/2002",
     "University Charter": "July 2002",
@@ -637,6 +661,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/bku.jpg",
     "Historical Perspective": "BACHA KHAN UNIVERSITY, CHARSADDA was established on July 03, 2012 with the mission to advance knowledge and learning through quality research and education for the whole nation. The message of peace and universal brotherhood as practiced and preached by Abdul Ghaffar Khan (Bacha Khan) will be the motto of the University to steer the organization in the years ahead which would induct Pakistan into the comity of respectable nations of the world.",
     "Established/Charter": "3 July 2012/2016",
     "University Charter": "2016",
@@ -663,6 +688,7 @@ const data = [
       "Food": "5000"
     },
     "information" : {
+    "image": "/images/uniImages/allama.jpg",
     "Historical Perspective": "he Allama Iqbal Open University was established in May, 1974, with the main objectives of providing educational opportunities to masses and to those who cannot leave their homes and jobs. During all these past years, the University has more than fulfilled this promise.It has opened up educational opportunities for the working people and has provided access to the females at their door steps.",
     "Established/Charter": "May 1974/2001",
     "University Charter": "2001",
@@ -689,6 +715,7 @@ const data = [
       "Food": "0"
     },
     "information" : {
+    "image": "/images/uniImages/AUST.jpg",
     "Historical Perspective": "Abbottabad University has more than 25+ majors and plenty of assistance for choosing one. Be a part of a friendly, supportive, and intellectually stimulating community while taking advantage of everything the Abbottabad University has to offer.",
     "Established/Charter": "2008/2016",
     "University Charter": "2016",
