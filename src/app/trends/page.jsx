@@ -47,23 +47,23 @@ export default function Trends() {
                   <CardDescription className="text-sm font-semibold">
                     Sector
                   </CardDescription>
-                  <CardTitle>Healthcare</CardTitle>
+                  <CardTitle>Finance</CardTitle>
                 </div>
                 <div>
                   <img
-                    alt="Healthcare"
+                    alt="Finance"
                     className="aspect-[2/1] object-cover rounded-md overflow-hidden"
                     height="60"
-                    src="/placeholder.svg"
+                    src="/finance.jpg"
                     width="120"
                   />
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-sm font-normal">
-                  The healthcare sector is expected to see significant
-                  growth due to an aging population and increased
-                  demand for medical services.
+                  The finance sector is poised for substantial growth,
+                  increasing demand for financial products and services, 
+                  and advancing technological innovations.
                 </p>
               </CardContent>
             </Card>
@@ -80,7 +80,7 @@ export default function Trends() {
                     alt="Technology"
                     className="aspect-[2/1] object-cover rounded-md overflow-hidden"
                     height="60"
-                    src="/placeholder.svg"
+                    src="/technology.jpg"
                     width="120"
                   />
                 </div>
@@ -98,23 +98,24 @@ export default function Trends() {
                   <CardDescription className="text-sm font-semibold">
                     Sector
                   </CardDescription>
-                  <CardTitle>Renewable Energy</CardTitle>
+                  <CardTitle>Engineering</CardTitle>
                 </div>
                 <div>
                   <img
-                    alt="Renewable Energy"
+                    alt="Engineering"
                     className="aspect-[2/1] object-cover rounded-md overflow-hidden"
                     height="60"
-                    src="/placeholder.svg"
+                    src="/engineering.jpg"
                     width="120"
                   />
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-sm font-normal">
-                  With a focus on sustainability, the renewable energy
-                  sector is creating new job opportunities in areas
-                  such as solar and wind power.
+                The engineering sector is projected to witness 
+                substantial advancement, propelled by emerging 
+                technologies, infrastructure development initiatives, 
+                and the global demand for innovative solutions across various industries.
                 </p>
               </CardContent>
             </Card>
@@ -126,7 +127,7 @@ export default function Trends() {
               Salary Projections
             </h2>
             <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              The median salary range for key job roles in 2024.
+              The median salary range for key job roles till 2025 (expected).
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -137,7 +138,7 @@ export default function Trends() {
                     alt="Avatar"
                     className="rounded-full"
                     height="48"
-                    src="/placeholder.svg"
+                    src="/softdev.jpg"
                     style={{
                       aspectRatio: "48/48",
                       objectFit: "cover",
@@ -147,11 +148,11 @@ export default function Trends() {
                 </div>
                 <div className="flex flex-col">
                   <CardDescription>Job Role</CardDescription>
-                  <CardTitle>Software Engineer</CardTitle>
+                  <CardTitle>Machine Learning Engineer</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CurvedlineChart className="w-full aspect-[2/1]" />
+                <CurvedlineChart1 className="w-full aspect-[2/1]" />
               </CardContent>
             </Card>
             <Card>
@@ -161,7 +162,7 @@ export default function Trends() {
                     alt="Avatar"
                     className="rounded-full"
                     height="48"
-                    src="/placeholder.svg"
+                    src="/marketing.jpg"
                     style={{
                       aspectRatio: "48/48",
                       objectFit: "cover",
@@ -175,7 +176,7 @@ export default function Trends() {
                 </div>
               </CardHeader>
               <CardContent>
-                <CurvedlineChart className="w-full aspect-[2/1]" />
+                <CurvedlineChart2 className="w-full aspect-[2/1]" />
               </CardContent>
             </Card>
             <Card>
@@ -185,7 +186,7 @@ export default function Trends() {
                     alt="Avatar"
                     className="rounded-full"
                     height="48"
-                    src="/placeholder.svg"
+                    src="/finAnalyst.jpg"
                     style={{
                       aspectRatio: "48/48",
                       objectFit: "cover",
@@ -199,7 +200,7 @@ export default function Trends() {
                 </div>
               </CardHeader>
               <CardContent>
-                <CurvedlineChart className="w-full aspect-[2/1]" />
+                <CurvedlineChart3 className="w-full aspect-[2/1]" />
               </CardContent>
             </Card>
             <Card>
@@ -209,7 +210,7 @@ export default function Trends() {
                     alt="Avatar"
                     className="rounded-full"
                     height="48"
-                    src="/placeholder.svg"
+                    src="/uiux.jpg"
                     style={{
                       aspectRatio: "48/48",
                       objectFit: "cover",
@@ -223,7 +224,7 @@ export default function Trends() {
                 </div>
               </CardHeader>
               <CardContent>
-                <CurvedlineChart className="w-full aspect-[2/1]" />
+                <CurvedlineChart4 className="w-full aspect-[2/1]" />
               </CardContent>
             </Card>
           </div>
@@ -233,7 +234,7 @@ export default function Trends() {
   );
 }
 
-function CurvedlineChart(props) {
+function CurvedlineChart1(props) {
   return (
     <div {...props}>
       <ResponsiveLine
@@ -241,27 +242,16 @@ function CurvedlineChart(props) {
           {
             id: "Desktop",
             data: [
-              { x: "Jan", y: 43 },
-              { x: "Feb", y: 137 },
-              { x: "Mar", y: 61 },
-              { x: "Apr", y: 145 },
-              { x: "May", y: 26 },
-              { x: "Jun", y: 154 },
-            ],
-          },
-          {
-            id: "Mobile",
-            data: [
-              { x: "Jan", y: 60 },
-              { x: "Feb", y: 48 },
-              { x: "Mar", y: 177 },
-              { x: "Apr", y: 78 },
-              { x: "May", y: 96 },
-              { x: "Jun", y: 204 },
+              { x: "2020", y: 93 },
+              { x: "2021", y: 107 },
+              { x: "2022", y: 94 },
+              { x: "2023", y: 145 },
+              { x: "2024", y: 150 },
+              { x: "2025", y: 210 },
             ],
           },
         ]}
-        margin={{ top: 10, right: 10, bottom: 40, left: 40 }}
+        margin={{ top: 20, right: 20, bottom: 40, left: 40 }}
         xScale={{
           type: "point",
         }}
@@ -270,7 +260,7 @@ function CurvedlineChart(props) {
           min: 0,
           max: "auto",
         }}
-        curve="monotoneX"
+        curve="natural"
         axisTop={null}
         axisRight={null}
         axisBottom={{
@@ -282,7 +272,202 @@ function CurvedlineChart(props) {
           tickValues: 5,
           tickPadding: 16,
         }}
-        colors={["#2563eb", "#e11d48"]}
+        colors={["#2563eb"]} // Only blue color for the line
+        pointSize={6}
+        useMesh={true}
+        gridYValues={6}
+        theme={{
+          tooltip: {
+            chip: {
+              borderRadius: "9999px",
+            },
+            container: {
+              fontSize: "12px",
+              textTransform: "capitalize",
+              borderRadius: "6px",
+            },
+          },
+          grid: {
+            line: {
+              stroke: "#f3f4f6",
+            },
+          },
+        }}
+        role="application"
+      />
+    </div>
+  );
+}
+
+function CurvedlineChart2(props) {
+  return (
+    <div {...props}>
+      <ResponsiveLine
+        data={[
+          {
+            id: "Desktop",
+            data: [
+              { x: "2020", y: 100 },
+              { x: "2021", y: 127 },
+              { x: "2022", y: 161 },
+              { x: "2023", y: 145 },
+              { x: "2024", y: 120 },
+              { x: "2025", y: 150 },
+            ],
+          },
+        ]}
+        margin={{ top: 20, right: 20, bottom: 40, left: 40 }}
+        xScale={{
+          type: "point",
+        }}
+        yScale={{
+          type: "linear",
+          min: 0,
+          max: "auto",
+        }}
+        curve="natural"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 16,
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickValues: 5,
+          tickPadding: 16,
+        }}
+        colors={["#2563eb"]} // Only blue color for the line
+        pointSize={6}
+        useMesh={true}
+        gridYValues={6}
+        theme={{
+          tooltip: {
+            chip: {
+              borderRadius: "9999px",
+            },
+            container: {
+              fontSize: "12px",
+              textTransform: "capitalize",
+              borderRadius: "6px",
+            },
+          },
+          grid: {
+            line: {
+              stroke: "#f3f4f6",
+            },
+          },
+        }}
+        role="application"
+      />
+    </div>
+  );
+}
+
+function CurvedlineChart3(props) {
+  return (
+    <div {...props}>
+      <ResponsiveLine
+        data={[
+          {
+            id: "Desktop",
+            data: [
+              { x: "2020", y: 92 },
+              { x: "2021", y: 147 },
+              { x: "2022", y: 111 },
+              { x: "2023", y: 145 },
+              { x: "2024", y: 136 },
+              { x: "2025", y: 160 },
+            ],
+          },
+        ]}
+        margin={{ top: 20, right: 20, bottom: 40, left: 40 }}
+        xScale={{
+          type: "point",
+        }}
+        yScale={{
+          type: "linear",
+          min: 0,
+          max: "auto",
+        }}
+        curve="natural"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 16,
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickValues: 5,
+          tickPadding: 16,
+        }}
+        colors={["#2563eb"]} // Only blue color for the line
+        pointSize={6}
+        useMesh={true}
+        gridYValues={6}
+        theme={{
+          tooltip: {
+            chip: {
+              borderRadius: "9999px",
+            },
+            container: {
+              fontSize: "12px",
+              textTransform: "capitalize",
+              borderRadius: "6px",
+            },
+          },
+          grid: {
+            line: {
+              stroke: "#f3f4f6",
+            },
+          },
+        }}
+        role="application"
+      />
+    </div>
+  );
+}
+
+function CurvedlineChart4(props) {
+  return (
+    <div {...props}>
+      <ResponsiveLine
+        data={[
+          {
+            id: "Desktop",
+            data: [
+              { x: "2020", y: 93 },
+              { x: "2021", y: 137 },
+              { x: "2022", y: 161 },
+              { x: "2023", y: 145 },
+              { x: "2024", y: 180 },
+              { x: "2025", y: 200 },
+            ],
+          },
+        ]}
+        margin={{ top: 20, right: 20, bottom: 40, left: 40 }}
+        xScale={{
+          type: "point",
+        }}
+        yScale={{
+          type: "linear",
+          min: 0,
+          max: "auto",
+        }}
+        curve="natural"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 16,
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickValues: 5,
+          tickPadding: 16,
+        }}
+        colors={["#2563eb"]} // Only blue color for the line
         pointSize={6}
         useMesh={true}
         gridYValues={6}
